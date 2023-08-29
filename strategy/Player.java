@@ -1,6 +1,6 @@
 package strategy;
 
-public class Player {
+public abstract class Player {
   private String firstName;
   private String lastName;
   private boolean offense;
@@ -13,7 +13,11 @@ public class Player {
   }
   public void setDefenseBehavior() {}
   public void setOffenseBehavior() {}
-  public String play() {}
-  
-
+  public String play() {
+    return null;
+  }
+  public void turnover() {}
+  public String toString() {
+    return null;
+  }
 }
