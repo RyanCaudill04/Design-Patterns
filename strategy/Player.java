@@ -6,18 +6,21 @@ public abstract class Player {
   private boolean offense;
   protected defenseBehavior DefenseBehavior;
   protected offenseBehavior OffenseBehavior;
-  Player(String firstName, String lastName, boolean offense) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.offense = offense;
+  Player(String inFirstName, String inLastName, boolean inOffense) {
+    this.firstName = inFirstName;
+    lastName = inLastName;
+    offense = inOffense;
   }
   public void setDefenseBehavior() {}
   public void setOffenseBehavior() {}
   public String play() {
-    return null;
+    return "";
   }
-  public void turnover() {}
+  public void turnover() {
+    offense = !offense;
+  }
   public String toString() {
-    return null;
+    String name = firstName + " " + lastName;
+    return name;
   }
 }

@@ -1,24 +1,24 @@
 package strategy;
 
 import java.util.Random;
-public class BlockBehavior implements defenseBehavior {
+public class RunBehavior implements offenseBehavior {
   @Override
   public String play() {
-    String returnString = "Block a ";
+    String returnString = "Runs a ";
     Random random = new Random();
     int randomNum = random.nextInt(4) + 1;
     switch (randomNum) {
       case 1:
-        returnString += "kick";
+        returnString += "drive (up the gut)";
         break;
       case 2:
-        returnString += "punt";
+        returnString += "draw";
         break;
       case 3:
-        returnString += "catch";
+        returnString += "pitch";
         break;
       case 4:
-        returnString += "pass";
+        returnString += "reverse";
         break;
     }
     return returnString;
