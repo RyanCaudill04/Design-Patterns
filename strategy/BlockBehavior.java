@@ -4,7 +4,7 @@ import java.util.Random;
 public class BlockBehavior implements defenseBehavior {
   @Override
   public String play() {
-    String returnString = "Block a ";
+    String returnString = "blocks a ";
     Random random = new Random();
     int randomNum = random.nextInt(4) + 1;
     switch (randomNum) {

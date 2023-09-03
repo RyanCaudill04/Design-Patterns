@@ -4,7 +4,7 @@ import java.util.Random;
 public class ReceiveBehavior implements offenseBehavior {
   @Override
   public String play() {
-    String returnString = "Runs a ";
+    String returnString = "runs a ";
     Random random = new Random();
     int randomNum = random.nextInt(5) + 1;
     switch (randomNum) {

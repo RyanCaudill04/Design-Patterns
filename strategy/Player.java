@@ -18,6 +18,11 @@ public abstract class Player {
   }
   public void turnover() {
     offense = !offense;
+    if (offense) {
+      this.setOffenseBehavior();
+    } else {
+      this.setDefenseBehavior();
+    }
   }
   public String toString() {
     String name = firstName + " " + lastName;

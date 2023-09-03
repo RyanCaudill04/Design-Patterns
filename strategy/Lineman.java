@@ -5,10 +5,8 @@ public class Lineman extends Player {
   Lineman(String firstName, String lastName, boolean offense) {
     super(firstName, lastName, offense);
     if(offense) {
-      DefenseBehavior = null;
       setOffenseBehavior();
     } else {
-      OffenseBehavior = null;
       setDefenseBehavior();
     }
   }
