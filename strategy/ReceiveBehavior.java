@@ -1,3 +1,4 @@
+// 2023 Ryan Caudill
 package strategy;
 
 import java.util.Random;
@@ -5,6 +6,8 @@ public class ReceiveBehavior implements offenseBehavior {
   @Override
   public String play() {
     String returnString = "runs a ";
+    // Randomly chooses between 5 routes
+    // slant, out, seem, screen, hail mary
     Random random = new Random();
     int randomNum = random.nextInt(5) + 1;
     switch (randomNum) {

@@ -1,3 +1,4 @@
+// 2023 Ryan Caudill
 package strategy;
 
 import java.util.Random;
@@ -5,6 +6,8 @@ public class RunBehavior implements offenseBehavior {
   @Override
   public String play() {
     String returnString = "runs a ";
+    // Randomly choooses between 4 runs
+    // drive, draw, pitch, reverse
     Random random = new Random();
     int randomNum = random.nextInt(4) + 1;
     switch (randomNum) {

@@ -1,8 +1,11 @@
+// 2023 Ryan Caudill
 package strategy;
 
 import java.util.Random;
 public class Lineman extends Player {
+  // Constructor for Lineman class
   Lineman(String firstName, String lastName, boolean offense) {
+    // Utilizes Player class constructor
     super(firstName, lastName, offense);
     if(offense) {
       setOffenseBehavior();
@@ -10,14 +13,18 @@ public class Lineman extends Player {
       setDefenseBehavior();
     }
   }
+  // setOffenseBehavior function
   @Override
   public void setOffenseBehavior() {
+    // Create OBlock object and assign to OffenseBehavior
     OBlockBehavior setOBlock = new OBlockBehavior();
     OffenseBehavior = setOBlock;
     DefenseBehavior = null;
   }
+  // setDefenseBehavior function
   @Override
   public void setDefenseBehavior() {
+    // Randomly chooses from three defense behaviors
     Random random = new Random();
     int randomNum = random.nextInt(3) + 1;
     switch (randomNum) {
@@ -36,6 +43,8 @@ public class Lineman extends Player {
     }
     OffenseBehavior = null;
   }
+  // play function
+  @Override
   public String play() {
     if (OffenseBehavior == null) {
       return this.DefenseBehavior.play();
