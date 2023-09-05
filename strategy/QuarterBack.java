@@ -38,13 +38,4 @@ public class QuarterBack extends Player {
     }
     DefenseBehavior = null;
   }
-  // play function
-  @Override
-  public String play() {
-    if (OffenseBehavior != null) {
-      return this.OffenseBehavior.play();
-    } else {
-      return "not playing";
-    }
-  }
 }

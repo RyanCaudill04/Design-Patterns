@@ -6,8 +6,6 @@ public class PassBehavior implements offenseBehavior {
   @Override
   public String play() {
     String returnString = "throws a ";
-    // Randomly chooses between 5 routes:
-    // slant, out, seem, screen, hail mary
     Random random = new Random();
     int randomNum = random.nextInt(5) + 1;
     switch (randomNum) {

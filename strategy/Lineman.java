@@ -13,18 +13,14 @@ public class Lineman extends Player {
       setDefenseBehavior();
     }
   }
-  // setOffenseBehavior function
   @Override
   public void setOffenseBehavior() {
-    // Create OBlock object and assign to OffenseBehavior
     OBlockBehavior setOBlock = new OBlockBehavior();
     OffenseBehavior = setOBlock;
     DefenseBehavior = null;
   }
-  // setDefenseBehavior function
   @Override
   public void setDefenseBehavior() {
-    // Randomly chooses from three defense behaviors
     Random random = new Random();
     int randomNum = random.nextInt(3) + 1;
     switch (randomNum) {
@@ -42,16 +38,5 @@ public class Lineman extends Player {
         break;
     }
     OffenseBehavior = null;
-  }
-  // play function
-  @Override
-  public String play() {
-    if (OffenseBehavior == null) {
-      return this.DefenseBehavior.play();
-    } else if (DefenseBehavior == null) {
-      return this.OffenseBehavior.play();
-    } else {
-      return "error";
-    }
   }
 }
