@@ -1,8 +1,14 @@
-// 2023 Ryan Caudill
 package strategy;
-
+/**
+ * Pass behavior for quarterback to use on offense
+ * @author Ryan Caudill
+ */
 import java.util.Random;
 public class PassBehavior implements offenseBehavior {
+  /**
+   * play function creates a string randomly between 5 options:
+   * @return throws a (slant, out, seem) route/screen pass/hail mary
+   */
   @Override
   public String play() {
     String returnString = "throws a ";

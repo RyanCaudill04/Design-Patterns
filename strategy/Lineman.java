@@ -1,11 +1,12 @@
-// 2023 Ryan Caudill
 package strategy;
 
 import java.util.Random;
+/**
+ * Lineman child of player class
+ * @author Ryan Caudill
+ */
 public class Lineman extends Player {
-  // Constructor for Lineman class
   Lineman(String firstName, String lastName, boolean offense) {
-    // Utilizes Player class constructor
     super(firstName, lastName, offense);
     if(offense) {
       setOffenseBehavior();
@@ -13,12 +14,20 @@ public class Lineman extends Player {
       setDefenseBehavior();
     }
   }
+  /**
+   * Gives the lineman OBlock offensive behavior and null
+   * defensive behavior
+   */
   @Override
   public void setOffenseBehavior() {
     OBlockBehavior setOBlock = new OBlockBehavior();
     OffenseBehavior = setOBlock;
     DefenseBehavior = null;
   }
+  /**
+   * Gives the lineman a random defensive behavior (Sack, 
+   * strip, block) and null offensive behavior
+   */
   @Override
   public void setDefenseBehavior() {
     Random random = new Random();

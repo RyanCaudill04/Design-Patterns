@@ -1,8 +1,14 @@
-// 2023 Ryan Caudill
 package strategy;
-
+/**
+ * @author Ryan Caudill
+ * run behavior for quarterback to use
+ */
 import java.util.Random;
 public class RunBehavior implements offenseBehavior {
+  /**
+   * Randomly generates string
+   * @return runs a (drive, draw, pitch, reverse) string
+   */
   @Override
   public String play() {
     String returnString = "runs a ";

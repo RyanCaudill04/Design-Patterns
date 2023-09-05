@@ -1,13 +1,17 @@
-// 2023 Ryan Caudill
 package strategy;
-
+/**
+ * @author Ryan Caudill
+ * Receive behavior offense behavior for receivers to use
+ */
 import java.util.Random;
 public class ReceiveBehavior implements offenseBehavior {
+  /**
+   * play function makes string for offense behavior
+   * @return random String runs a (slant, out, seem, screen, hail mary) route
+   */
   @Override
   public String play() {
     String returnString = "runs a ";
-    // Randomly chooses between 5 routes
-    // slant, out, seem, screen, hail mary
     Random random = new Random();
     int randomNum = random.nextInt(5) + 1;
     switch (randomNum) {
