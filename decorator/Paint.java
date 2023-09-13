@@ -1,5 +1,9 @@
 package decorator;
-
+/**
+ * @author Ryan Caudill
+ * Paint subclass of vehicle decorator adds unicode to start
+ * of each line to change text output color
+ */
 public class Paint extends VehicleDecorator {
   Paint(Vehicle vehicle, String color) {
     super(vehicle.lines);
