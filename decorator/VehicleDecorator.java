@@ -17,18 +17,17 @@ public abstract class VehicleDecorator extends Vehicle {
    */
   protected void integrateDecor(ArrayList<String> decor) {
     // For loop replace characters
-    int i = 0, offset = 0;
+    int i = 0;
     for (String line : lines) {
-      if (line.charAt(0) != ' ') {
-        offset = 5;
-      } else {
-        offset = 0;
+      if (i == 0) {
+        i++;
+        continue;
       }
       char[] linesChar = line.toCharArray();
-      for (int j = 0; (j < line.length() - offset) && (j < decor.get(i).length()); j++) {
-        if ((linesChar[j + offset] != decor.get(i).charAt(j)) && ((linesChar[j + offset] == ' ') || 
-          (linesChar[j + offset] == ')' && decor.get(i).charAt(j) != ' '))) {
-          linesChar[j + offset] = decor.get(i).charAt(j);
+      for (int j = 0; (j < line.length()) && (j < decor.get(i).length()); j++) {
+        if ((linesChar[j] != decor.get(i).charAt(j)) && ((linesChar[j] == ' ') || 
+          (linesChar[j] == ')' && decor.get(i).charAt(j) != ' '))) {
+          linesChar[j] = decor.get(i).charAt(j);
         }
       }
       String temp = new String(linesChar);
