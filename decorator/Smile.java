@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Smile extends VehicleDecorator {
   Smile(Vehicle vehicle) {
     super(vehicle.lines);
-    ArrayList<String> list = FileReader.getLines("decorator/smile.txt");
+    ArrayList<String> list = FileReader.getLines("decorator/txt/smile.txt");
     integrateDecor(list);
   }
 }
