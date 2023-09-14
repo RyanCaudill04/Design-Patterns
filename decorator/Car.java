@@ -6,6 +6,6 @@ package decorator;
  */
 public class Car extends Vehicle {
   Car() {
-    super(FileReader.getLines("/Users/ryancaudill/Desktop/School/Semester_3/Software Engineering/Design-Patterns/decorator/car.txt"));
+    super(FileReader.getLines("decorator/car.txt"));
   }
 }
