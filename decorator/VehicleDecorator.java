@@ -19,7 +19,7 @@ public abstract class VehicleDecorator extends Vehicle {
     // For loop replace characters
     int i = 0;
     for (String line : lines) {
-      if (i == 0) {
+      if (i == 0 && (line.charAt(0) != ' ')) {
         i++;
         continue;
       }
