@@ -19,6 +19,7 @@ public abstract class Bike {
     returnString += createFrame();
     returnString += addWheels();
     returnString += addPedals();
+    returnString += "- Price is $" + getPrice();
     return returnString;
   }
   /**

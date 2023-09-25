@@ -10,5 +10,6 @@ public class Strider extends Bike {
     numWheels = 2;
     hasPedals = false;
     hasTrainingWheels = false;
+    price = 5.49;
   }
 }

@@ -9,5 +9,6 @@ public class KidsBike extends Bike {
     numWheels = 3;
     hasPedals = true;
     hasTrainingWheels = true;
+    price = 10.55;
   }
 }
