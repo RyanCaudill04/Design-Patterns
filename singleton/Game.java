@@ -63,9 +63,9 @@ public class Game {
     } else {
       score--;
     }
-    if (score > 10) {
+    if (score > 6) {
       level = Difficulty.HARD;
-    } else if (score > 5) {
+    } else if (score > 3) {
       level = Difficulty.MEDIUM;
     } else {
       level = Difficulty.EASY;
